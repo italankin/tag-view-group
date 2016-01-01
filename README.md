@@ -1,0 +1,1 @@
+Android custom view group arranging childs like tag badges.
