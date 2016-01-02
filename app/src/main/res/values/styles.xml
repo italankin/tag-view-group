@@ -12,7 +12,7 @@
         <item name="android:background">@drawable/bg</item>
         <item name="android:clickable">true</item>
         <item name="android:padding">7dp</item>
-        <item name="android:textSize">@dimen/text</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">#fff</item>
     </style>
 
