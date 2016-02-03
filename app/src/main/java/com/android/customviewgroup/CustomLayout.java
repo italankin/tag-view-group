@@ -97,8 +97,8 @@ public class CustomLayout extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        int left = l + getPaddingLeft();
-        int top = t + getPaddingTop();
+        int left = getPaddingLeft();
+        int top = getPaddingTop();
 
         final int maxWidth = getMeasuredWidth() - getPaddingLeft() - getPaddingRight();
         final int gravity = Gravity.TOP | Gravity.START;
