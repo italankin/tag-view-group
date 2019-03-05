@@ -113,7 +113,7 @@ public class CustomLayout extends ViewGroup {
                 final int height = child.getMeasuredHeight();
 
                 // check if child does not fit into current row
-                if (rowWidth + width + lp.leftMargin + lp.rightMargin + mChildSpacing > maxWidth
+                if (left + rowWidth + width + lp.leftMargin + lp.rightMargin + mChildSpacing > maxWidth
                         && i != 0) {
                     top += mChildMaxHeight + mChildSpacing;
                     rowWidth = 0;
@@ -126,13 +126,13 @@ public class CustomLayout extends ViewGroup {
                 // form child rect
                 mTmpContainerRect.left = left + rowWidth + lp.leftMargin;
                 mTmpContainerRect.top = top + lp.topMargin;
-                mTmpContainerRect.bottom = top + mChildMaxHeight;
+                mTmpContainerRect.bottom = top + mChildMaxHeight + lp.bottomMargin;
                 mTmpContainerRect.right = mTmpContainerRect.left + width + lp.rightMargin;
                 Gravity.apply(gravity, width, height, mTmpContainerRect, mTmpChildRect);
                 child.layout(mTmpChildRect.left, mTmpChildRect.top, mTmpChildRect.right,
                         mTmpChildRect.bottom);
 
-                rowWidth += mTmpContainerRect.width();
+                rowWidth += lp.leftMargin + width + lp.rightMargin;
             }
         }
     }
