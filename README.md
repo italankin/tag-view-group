@@ -1,1 +1,1 @@
-Android custom view group arranging childs like tag badges.
+![Preview](/preview.gif)
